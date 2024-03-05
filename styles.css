@@ -1,19 +1,29 @@
+.top-card {
+  order: -1; /* Set a negative order for top cards */
+}
+
 :root {
   --card-height: 300px;
   --card-width: calc(var(--card-height) / 1.5);
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
   display: flex;
+  flex-wrap: wrap; /* Updated to allow cards to wrap onto the next line */
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  background: #191c29;
+  background: url("./assets/img/space.png");
+  background-size: cover;
 }
+
 .card {
   width: var(--card-width);
   height: var(--card-height);
